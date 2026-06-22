@@ -1,0 +1,309 @@
+/* =========================
+   Genel Ayarlar
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f7fb;
+    color: #333;
+    min-height: 100vh;
+    padding: 30px 15px;
+}
+
+/* =========================
+   Container
+========================= */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* =========================
+   Header
+========================= */
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.3rem;
+    color: #1e293b;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #64748b;
+    font-size: 1rem;
+}
+
+/* =========================
+   Kartlar
+========================= */
+
+.card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.card h2 {
+    margin-bottom: 15px;
+    color: #0f172a;
+}
+
+/* =========================
+   Form Alanları
+========================= */
+
+.form-group,
+.reward-input-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+input {
+    flex: 1;
+    min-width: 180px;
+    padding: 12px 15px;
+    border: 1px solid #dbe2ea;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.2s;
+}
+
+input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
+}
+
+/* =========================
+   Butonlar
+========================= */
+
+button {
+    border: none;
+    cursor: pointer;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+button:hover {
+    transform: scale(1.03);
+}
+
+#addChildBtn,
+#addRuleBtn,
+#saveTargetBtn {
+    background: #2563eb;
+    color: white;
+}
+
+#addChildBtn:hover,
+#addRuleBtn:hover,
+#saveTargetBtn:hover {
+    background: #1d4ed8;
+}
+
+/* =========================
+   Kurallar Listesi
+========================= */
+
+#rulesList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rule-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 12px;
+    border-left: 5px solid #2563eb;
+}
+
+.rule-name {
+    font-weight: 600;
+}
+
+.rule-points {
+    font-weight: bold;
+}
+
+.rule-positive {
+    color: #16a34a;
+}
+
+.rule-negative {
+    color: #dc2626;
+}
+
+/* =========================
+   Çocuk Kartları
+========================= */
+
+#childrenList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+.child-card {
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.child-card:hover {
+    border-color: #2563eb;
+}
+
+.child-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.child-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.child-points {
+    font-size: 1.3rem;
+    color: #2563eb;
+    font-weight: bold;
+}
+
+/* =========================
+   Ödül Rozeti
+========================= */
+
+.reward-badge {
+    display: inline-block;
+    margin-top: 10px;
+    background: #16a34a;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+/* =========================
+   Kural Butonları
+========================= */
+
+.rule-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.rule-btn {
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: white;
+    font-size: 0.85rem;
+}
+
+.rule-btn-positive {
+    background: #16a34a;
+}
+
+.rule-btn-positive:hover {
+    background: #15803d;
+}
+
+.rule-btn-negative {
+    background: #dc2626;
+}
+
+.rule-btn-negative:hover {
+    background: #b91c1c;
+}
+
+/* =========================
+   Silme Butonları
+========================= */
+
+.delete-btn {
+    background: #ef4444;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #dc2626;
+}
+
+/* =========================
+   Boş Liste Mesajı
+========================= */
+
+.empty-message {
+    text-align: center;
+    padding: 20px;
+    color: #94a3b8;
+    font-style: italic;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .child-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .form-group,
+    .reward-input-group {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    #childrenList {
+        grid-template-columns: 1fr;
+    }
+}

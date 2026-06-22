@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çocuk Puan Takip Sistemi</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>🏆 Çocuk Puan Takip Sistemi</h1>
+            <p>Kurallara uy, puan kazan, ödülü kap!</p>
+        </header>
+
+        <!-- Ödül Hedefi -->
+        <section class="reward-section card">
+            <h2>🎁 Ödül Hedefi</h2>
+
+            <div class="reward-input-group">
+                <input
+                    type="number"
+                    id="rewardTarget"
+                    placeholder="Hedef puan giriniz"
+                >
+
+                <button id="saveTargetBtn">
+                    Kaydet
+                </button>
+            </div>
+
+            <p>
+                Hedef Puan:
+                <strong id="targetDisplay">100</strong>
+            </p>
+        </section>
+
+        <!-- Çocuk Ekle -->
+        <section class="child-section card">
+            <h2>👦 Çocuk Ekle</h2>
+
+            <div class="form-group">
+                <input
+                    type="text"
+                    id="childName"
+                    placeholder="Çocuk adı"
+                >
+
+                <button id="addChildBtn">
+                    Ekle
+                </button>
+            </div>
+        </section>
+
+        <!-- Kural Ekle -->
+        <section class="rule-section card">
+            <h2>📋 Kural Ekle</h2>
+
+            <div class="form-group">
+                <input
+                    type="text"
+                    id="ruleName"
+                    placeholder="Kural adı"
+                >
+
+                <input
+                    type="number"
+                    id="rulePoints"
+                    placeholder="Puan"
+                >
+
+                <button id="addRuleBtn">
+                    Ekle
+                </button>
+            </div>
+        </section>
+
+        <!-- Kurallar -->
+        <section class="rules-list-section card">
+            <h2>📌 Kurallar</h2>
+
+            <div id="rulesList">
+                <!-- JS ile doldurulacak -->
+            </div>
+        </section>
+
+        <!-- Çocuklar -->
+        <section class="children-section card">
+            <h2>⭐ Çocuklar</h2>
+
+            <div id="childrenList">
+                <!-- JS ile doldurulacak -->
+            </div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
